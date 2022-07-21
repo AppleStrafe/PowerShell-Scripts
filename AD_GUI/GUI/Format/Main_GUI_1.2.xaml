@@ -1,0 +1,75 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="PACS" Height="460" Width="800">
+    <Grid>
+        <TabControl x:Name="tabControl" Margin="113,0,0,0">
+            <TabItem Header="Main" Width="0" Height="0">
+                <Grid x:Name="tc_Main" Background="#FFE5E5E5">
+                    <Label Content="Main Window" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="User Creation" Margin="-2,0,9,0" Width="0" Height="0">
+                <Grid x:Name="tc_User_Creation" Background="#FFE5E5E5">
+                    <Label Content="Full Name:" HorizontalAlignment="Left" Margin="40,54,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="16" FontWeight="Bold" Height="30"/>
+                    <Label Content="Facility:" HorizontalAlignment="Left" Margin="40,84,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="Black" Height="30"/>
+                    <Label Content="User Creation" HorizontalAlignment="Center" Margin="0,12,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="txt_FullName" HorizontalAlignment="Left" Margin="163,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Height="20" Background="White" AutomationProperties.IsRequiredForForm="True"/>
+                    <ComboBox x:Name="cb_User_Template" HorizontalAlignment="Left" Margin="163,151,0,0" VerticalAlignment="Top" Width="225" Height="20" AutomationProperties.IsRequiredForForm="True" SelectedIndex="0"/>
+                    <Button x:Name="btn_Next" Content="Next" HorizontalAlignment="Left" Margin="226,294,0,0" VerticalAlignment="Top" Width="114" Background="#FF069E2B" FontSize="20" IsDefault="True"/>
+                    <CheckBox x:Name="ch_Must_Reset" Content="User must reset password on first login." HorizontalAlignment="Left" Margin="74,219,0,0" VerticalAlignment="Top" FontSize="14" Foreground="Black" FontWeight="Bold" IsChecked="True"/>
+                    <CheckBox x:Name="Cant_Change" Content="User can't change password" HorizontalAlignment="Left" Margin="74,242,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="14" FontWeight="Bold"/>
+                    <Label Content="Job Title:" HorizontalAlignment="Left" Margin="40,114,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="16" FontWeight="Bold"/>
+                    <TextBox x:Name="Search_Box" HorizontalAlignment="Left" Margin="102,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="20" Background="White" AutomationProperties.IsRequiredForForm="True"/>
+                    <ListBox x:Name="lb_Groups" Margin="401,54,10,10" SelectionMode="Multiple" Background="#FFF9FCFF"/>
+                    <Label Content="User Template:" HorizontalAlignment="Left" Margin="40,145,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="16" FontWeight="Bold"/>
+                    <ComboBox x:Name="cb_Facility_List" HorizontalAlignment="Left" Margin="163,89,0,0" VerticalAlignment="Top" Width="225" Height="20" AutomationProperties.IsRequiredForForm="True"/>
+                    <Button x:Name="btn_Copy" Content="Copy" HorizontalAlignment="Left" Margin="80,294,0,0" VerticalAlignment="Top" Width="110" Background="#FFCCCECD" FontSize="20"/>
+                    <CheckBox x:Name="Never_Expires" Content="Password never expires" HorizontalAlignment="Left" Margin="74,265,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="14" FontWeight="Bold"/>
+                    <Button x:Name="Group_Search" Content="Search" HorizontalAlignment="Left" Margin="340,345,0,0" VerticalAlignment="Top" Width="48"/>
+                    <TextBox x:Name="txt_JobTitle" HorizontalAlignment="Left" Margin="163,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Height="20" Background="White" AutomationProperties.IsRequiredForForm="True"/>
+                    <Label Content="Office License:" HorizontalAlignment="Left" Margin="40,176,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="16" FontWeight="Bold"/>
+                    <ComboBox x:Name="cb_Office_License" HorizontalAlignment="Left" Margin="163,182,0,0" VerticalAlignment="Top" Width="225" Height="20" AutomationProperties.IsRequiredForForm="True" SelectedIndex="0"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="User Termination" Margin="-2,0,9,0" Width="0" Height="0">
+                <Grid x:Name="tc_User_Termination" Background="#FFE5E5E5">
+                    <Label Content="Terminate User" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
+                    <TextBox x:Name="Txt_Log_On_Name" HorizontalAlignment="Center" Margin="0,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239" AutomationProperties.IsRequiredForForm="True"/>
+                    <Label Content="Log-On Name:" HorizontalAlignment="Left" Margin="52,60,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+                    <CheckBox x:Name="cb_Non_Litigation" Content="Non-Litigation" HorizontalAlignment="Left" Margin="169,196,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <CheckBox x:Name="cb_Litigation" Content="Litigation" HorizontalAlignment="Left" Margin="407,196,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.445,-0.736" IsChecked="True"/>
+                    <CheckBox x:Name="cb_Pacs_Hq" Content="PACS HQ" HorizontalAlignment="Center" Margin="0,196,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <DatePicker x:Name="Sep_Date" HorizontalAlignment="Center" SelectedDateFormat="Short" Margin="0,95,0,0" VerticalAlignment="Top" Width="239" IsTodayHighlighted="True"/>
+                    <Label Content="Seperation Date:" HorizontalAlignment="Left" Margin="52,91,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+                    <Label Content="Ticket #:" HorizontalAlignment="Left" Margin="52,122,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+                    <TextBox x:Name="Txt_Ticket" HorizontalAlignment="Center" Margin="0,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239" AutomationProperties.IsRequiredForForm="True"/>
+                    <Button x:Name="btn_Term_Confirm" Content="Confirm" HorizontalAlignment="Center" Margin="0,238,0,0" VerticalAlignment="Top" Background="#FF09A51A" FontWeight="Bold" FontSize="16"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Script Toolbox" Margin="-2,0,9,0" Width="0" Height="0">
+                <Grid x:Name="tc_ScriptToolbox" Background="#FFE5E5E5">
+                    <ListBox x:Name="dg_ScriptToolbox" Margin="0,0,0,64" />
+                    <Button x:Name="btn_runScript" Content="RUN" HorizontalAlignment="Center" Margin="0,386,0,0" VerticalAlignment="Top" Width="131" Height="26" Background="#FF74BF2D" FontWeight="Bold" FontSize="16"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Bulk Group Add" Margin="-2,0,9,0" Width="0" Height="0">
+                <Grid x:Name="tc_Bulk_Group" Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Placeholder" Margin="-2,0,9,0" Width="0" Height="0">
+                <Grid x:Name="tc_placeholder" Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="btn_Main" Content="Main" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="39" Width="98" FontWeight="Bold"/>
+        <Button x:Name="btn_User_Creation" Content="Create User" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top" Height="39" Width="98" FontWeight="Bold"/>
+        <Button x:Name="btn_User_Termination" Content="Terminate User" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" Height="39" Width="98" FontWeight="Bold"/>
+        <Button x:Name="btn_ScriptToolbox" Content="Script Toolbox" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Height="39" Width="98" FontWeight="Bold"/>
+        <Button x:Name="btn_Group_Add" Content="Group Add" HorizontalAlignment="Left" Margin="10,186,0,0" VerticalAlignment="Top" Height="39" Width="98" FontWeight="Bold" IsEnabled="False"/>
+        <Button x:Name="btn_Exit" Content="Exit" HorizontalAlignment="Left" Margin="10,390,0,0" Width="98" FontWeight="Bold" Background="#FFC10000" FontSize="14" IsCancel="True" Height="39" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

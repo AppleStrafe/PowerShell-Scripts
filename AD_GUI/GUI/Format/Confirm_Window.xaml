@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Pacs | Confirmation" Height="300" Width="400">
+    <Grid>
+        <Label Content="Confirm?" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="#FF101010" FontWeight="Bold" FontSize="16"/>
+        <ScrollViewer Margin="30,41,31,52">
+            <TextBlock x:Name="txt_Confirm" TextWrapping="Wrap" Width="295" TextAlignment="Center" IsEnabled="False" FontSize="14" FontWeight="Bold" Height="137"/>
+        </ScrollViewer>
+        <Button x:Name="btn_Cancel"  Content="Close" HorizontalAlignment="Left" Margin="132,244,0,0" VerticalAlignment="Top" IsCancel="True" Background="#FFAF0000" FontWeight="Bold" Width="50"/>
+        <Button x:Name="btn_confirm" Content="Confirm" HorizontalAlignment="Left" Margin="232,244,0,0" VerticalAlignment="Top" Background="#FF008615" FontWeight="Bold" Width="50" IsDefault="True"/>
+
+    </Grid>
+</Window>
